@@ -15,7 +15,7 @@ $auditTypes = [
 
 $currentUser = auth()->check() ? (auth()->user()->username ?? auth()->user()->name ?? '') : '';
 ?>
-<dialog id="audit-create-modal" class="modal">
+<dialog id="audit-create-modal" class="modal" data-theme="light">
     <div class="modal-box max-w-2xl">
         <form method="dialog">
             <button type="submit" class="btn btn-ghost btn-circle btn-sm absolute right-3 top-3" aria-label="Close">
@@ -23,7 +23,7 @@ $currentUser = auth()->check() ? (auth()->user()->username ?? auth()->user()->na
             </button>
         </form>
 
-        <h3 class="text-lg font-semibold text-gray-900">New energy audit</h3>
+        <h3 class="text-lg font-semibold text-gray-200">New energy audit</h3>
         <p class="mt-1 text-sm text-gray-500">
             Register a walkthrough or ASHRAE assessment. Demo only &mdash; nothing is saved yet.
         </p>

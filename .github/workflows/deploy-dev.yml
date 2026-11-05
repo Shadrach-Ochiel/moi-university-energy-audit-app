@@ -1,0 +1,32 @@
+name: Deploy Application via ShipIt
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to Server
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Remote ShipIt Deployment
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT || 22 }}
+          script: |
+            set -e
+
+            # 1. Ensure user local binaries are in PATH
+            export PATH="$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH"
+
+            # 2. Navigate to the project root on the VPS
+            cd /home/admin/domains/shadrach.lipex.xyz
+
+            # 3. Execute ShipIt in verbose mode for clear CI/CD logs
+            shipit deploy --verbose
