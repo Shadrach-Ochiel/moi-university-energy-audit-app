@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $title ?? "Jengo Application" ?></title>
+    <title><?= $title ?? "G12 Energy Audit" ?></title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">

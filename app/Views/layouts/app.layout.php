@@ -14,7 +14,12 @@
                     <!-- Logo -->
                     <div class="shrink-0 flex items-center">
                         <a href="<?= url_to('/') ?>" class="flex items-center space-x-2">
-                            <img src="<?= base_url('images/logo6.png') ?>" alt="Jengo" class="h-8 w-auto">
+                            <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-5 w-5" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+                                </svg>
+                            </span>
+                            <span class="text-sm font-semibold tracking-tight text-gray-900">G12 Energy Audit</span>
                         </a>
                     </div>
 
@@ -28,10 +33,13 @@
 
                 <!-- Settings Dropdown / Auth Links -->
                 <div class="hidden sm:flex sm:items-center sm:ml-6">
-                    <?php if (auth()->loggedIn()): ?>
+                    <?php if (auth()->check()): ?>
                         <div class="flex items-center space-x-4">
                             <span class="text-sm text-gray-700"><?= auth()->user()->username ?? 'User' ?></span>
-                            <a href="<?= url_to('logout') ?>" class="text-sm text-gray-500 hover:text-gray-700">Logout</a>
+                            <form action="<?= url_to('logout') ?>" method="post">
+                                 <button type="submit" class="text-sm text-gray-500 hover:text-gray-700">Logout</button>
+                                </form>
+                           
                         </div>
                     <?php else: ?>
                         <div class="flex items-center space-x-4">

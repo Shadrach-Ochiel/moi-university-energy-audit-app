@@ -1,0 +1,11 @@
+{
+  "resources/js/main.entrypoint.ts": {
+    "file": "assets/resources\\js\\main_entrypoint_ts-DFJuAvmV.js",
+    "name": "resources\\js\\main_entrypoint_ts",
+    "src": "resources/js/main.entrypoint.ts",
+    "isEntry": true,
+    "css": [
+      "assets/main_entrypoint_ts-CNHFtakY.css"
+    ]
+  }
+}

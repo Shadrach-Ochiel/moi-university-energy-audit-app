@@ -90,5 +90,6 @@ class Autoload extends AutoloadConfig
      */
     public $helpers = [
         'Vima\CodeIgniter\Helpers\vima',
+        'Jengo\Auth\Helpers\auth',
     ];
 }

@@ -7,9 +7,16 @@
     "dev": "vite",
     "build": "vite build"
   },
-  "dependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.4",
+    "daisyui": "^5.7.50",
+    "vite": "^8.3.6"
+  },
+  "dependencies": {
+    "@jengo/vite": "^1.0.11"
+  }
 }
