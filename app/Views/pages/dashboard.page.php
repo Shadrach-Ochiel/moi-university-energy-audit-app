@@ -29,7 +29,7 @@ $severityBadges = [
         <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
                 <p class="text-xs font-semibold uppercase tracking-widest text-primary">Portfolio overview</p>
-                <h1 class="mt-1 text-2xl font-semibold text-gray-900">Energy audits</h1>
+                <h1 class="mt-1 text-2xl font-semibold text-gray-900">Energy audits - Editted</h1>
                 <p class="mt-1 max-w-2xl text-sm text-gray-500">
                     Walkthroughs, ASHRAE assessments and the savings they have identified across
                     <?= number_format((int) $summary['floor_area']) ?> m&sup2; of floor area.
